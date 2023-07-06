@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zachary Goniea - Computer Scientist</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/48c0164965.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" alt="logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Computer Scientist</p>
+                <h1>Hi! I'm <span>Zachary Goniea</span><br> from Michgan</h1>
+            </div>
+        </div>
+    </div>
+<!-----------------about--------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg" alt="me">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>It's not a novel story. From a young age, I've had a fascination and a passion for computers, machines, and many other such doohickeys. Early in school, 
+                        I wasn't entirely sure how I would manifest this infatuation in the form of a career. In my Junior year, I took a chance and joined my school's IT internship program, 
+                        instantly falling in love with the idea of working with computers as a job. Now, I'm years into my degree at Grove City College, with plans to graduate in the spring of 2024, 
+                        and I'm enjoying the challenge more than ever. I've loved learning more about how a computer works and the language they speak. I'm tenacious, loyal, funny, and eager for 
+                        any opportunity an employer may have for me! Please reach out to me on one of my social media accounts, via email, or through the contact messenger at the bottom of this site. Thanks for stopping by! </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Java Development</span><br>Java software development</li>
+                            <li><span>Unity Game Development</span><br>Game Design/Development in Unity with C#</li>
+                            <li><span>Software Development Tools</span><br>Software development tools like Jira, Github, and Docker as well as Agile experience</li>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022-Current</span><br>Media Services Technician at Grove City College</li>
+                            <li><span>Summer 2022</span><br>Front Desk/Data Entry Clerk at Phoenix Services, LLC</li>
+                            <li><span>Summer 2021</span><br>Associate at Panera Bread</li>
+                            <li><span>2018-2020</span><br>IT internship at Lenawee Christian School</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-2024 (planned)</span><br>B.A. in Computer Science</li>
+                            <li><span>2020</span><br>Diploma from Lenawee Christian School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -----------------services-------------------- -->
+<div class="services" id="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="services-list">
+            <!-- software -->
+            <div class="serve">
+                <i class="fa-solid fa-code"></i>
+                <h2>Software Development</h2>
+                <p>Java and Python front or back end development. Experience with full software design process,
+                    including planning/design stages, customer-interaction,
+                    Agile workflow/philosophy (SCRUM), programming/coding (CI/CD), and testing</p>
+                <a href="#" class="learn-more-button">Learn more</a>
+            </div>
+            <div class="popup">
+                <div class="popup-content">
+                    <div class="close-btn-wrapper">
+                        <button class="close-btn">x</button>
+                    </div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Software Development</h2>
+                        <p>
+                            I have strong proficiency in writing functional, object-oriented code in Java and Python. Additionally, I possess a decent understanding of C# programming language. With these languages, I can develop robust and scalable software solutions to meet various business needs.
+                          </p><br>
+                          <p>
+                            In Java development, I have hands-on experience with the full-stack process, especially in following the Agile philosophy through SCRUM. This encompasses all stages of development, starting from customer interest and user journeys to diagramming and planning. I am adept at writing stub code, setting up version control with tools like Git/GitHub, and writing comprehensive unit tests to ensure code quality.
+                          </p><br>
+                          <p>
+                            Throughout my development journey, I have utilized project management tools like Jira to plan and set up sprints, ensuring efficient collaboration and timely delivery. My expertise extends to implementing algorithms, writing efficient code, and considering performance optimization in Java projects.
+                          </p><br>
+                          <p>
+                            I am well-versed in utilizing Docker for containerization, which helps in creating portable and scalable applications. I also have experience in UI design and modifying the user experience based on valuable feedback obtained through continuous integration and continuous deployment (CI/CD) practices.
+                          </p><br>
+                          <p>
+                            I am enthusiastic about both back-end and front-end development and I am open to any tasks that an employer may present to me. I enjoy tackling challenges, learning new technologies, and delivering high-quality software solutions.
+                          </p>
+                </div>
+            </div>
+            <!-- game -->
+            <div class="serve">
+                <i class="fa-brands fa-unity"></i>
+                <h2>Game Development</h2>
+                <p>Unity Game Development. Experience with Unity in both 2D and 3D. Understanding of Game design
+                    concepts like risk/reward, triangularity, difficulty curves, and many (many) others</p>
+                <a href="#" class="learn-more-button">Learn more</a>
+            </div>
+            <div class="popup">
+                <div class="popup-content">
+                    <div class="close-btn-wrapper">
+                        <button class="close-btn">x</button>
+                    </div>
+                    <i class="fa-brands fa-unity"></i>
+                    <h2>Game Development</h2>
+                        <p>
+                        Unity Game Development is one of my areas of expertise. I have extensive experience working with Unity for both 2D and 3D game development projects. 
+                      </p><br>
+                      <p>
+                        With my Unity skills, I can design and develop engaging games with intuitive gameplay, captivating visuals, and smooth performance. I am well-versed in utilizing Unity's scripting language, C#, to implement game mechanics, physics, artificial intelligence, user interfaces, and more.
+                      </p><br>
+                      <p>
+                        In addition to technical proficiency, I also have a solid understanding of game design concepts that contribute to the overall player experience. Concepts such as risk/reward, triangularity, difficulty curves, pacing, level design, and player engagement are crucial elements in creating compelling and enjoyable games. I strive to incorporate these concepts into my game development process to ensure high-quality and immersive gameplay.
+                      </p><br>
+                      <p>
+                        I am passionate about game development and constantly stay updated with the latest trends and technologies in the industry. I enjoy collaborating with teams and have experience working in Agile environments to deliver successful game projects.
+                      </p>
+                </div>
+            </div>
+            <!-- IT -->
+            <div class="serve">
+                <i class="fa-solid fa-computer"></i>
+                <h2>IT Technician/Support</h2>
+                <p>IT support specialist. Experience with management of tasks/tickets and aiding with technical issues.
+                    Experience with setting up
+                    network switches and access points, along with their testing</p>
+                <a href="#" class="learn-more-button">Learn more</a>
+            </div>
+            <div class="popup">
+                <div class="popup-content">
+                    <div class="close-btn-wrapper">
+                        <button class="close-btn">x</button>
+                    </div>
+                    <i class="fa-solid fa-computer"></i>
+                    <h2>IT Technician/Support</h2>
+                    <p>
+                        As an IT Support Specialist, I have gained valuable experience in managing tasks and tickets, as well as providing assistance with various technical issues. I am adept at troubleshooting and resolving software, hardware, and network-related problems to ensure smooth operations and user satisfaction.
+                      </p><br>
+                      <p>
+                        One of my areas of expertise lies in setting up network switches and access points. I have hands-on experience in configuring and deploying these devices to establish robust and secure network infrastructures. Additionally, I am skilled in conducting thorough testing to verify the functionality and performance of the network components.
+                      </p><br>
+                      <p>
+                        In my role as an IT Support Specialist, I have developed a deep understanding of network protocols, routing, and security measures. I am proficient in diagnosing and resolving network connectivity issues, optimizing network performance, and ensuring data integrity.
+                      </p><br>
+                      <p>
+                        Beyond network-related tasks, I am well-versed in managing tasks and tickets, utilizing ticketing systems to prioritize and address user requests efficiently. I possess strong communication and interpersonal skills, allowing me to provide excellent customer service and support to end-users.
+                      </p><br>
+                      <p>
+                        I am continuously expanding my knowledge in the ever-evolving field of IT support and am eager to contribute my skills to provide reliable technical assistance to businesses and individuals.
+                      </p>
+                </div>
+            </div>
+            <!-- Web -->
+            <div class="serve">
+                <i class="fa-solid fa-window-maximize"></i>
+                <h2>Website Development</h2>
+                <p>I can create, design, and develope a customer's personal or business website to a customer's liking.
+                    The site will look sleek, smooth, and modern</p>
+                <a href="#" class="learn-more-button">Learn more</a>
+            </div>
+            <div class="popup">
+                <div class="popup-content">
+                    <div class="close-btn-wrapper">
+                        <button class="close-btn">x</button>
+                    </div>
+                    <i class="fa-solid fa-window-maximize"></i>
+                    <h2>Website Development</h2>
+                    <p>
+                        With my skills in website development, I can create, design, and develop personalized websites tailored to the specific needs and preferences of my clients. Whether it's a personal portfolio, a blog, or a business website, I strive to deliver a seamless and captivating online presence that aligns with the client's vision.
+                      </p><br>
+                      <p>
+                        As a testament to my capabilities, the current website you are viewing is an example of my work. I designed and developed this site to showcase my skills and expertise in website development.
+                      </p><br>
+                      <p>
+                        When working with clients, I focus on creating websites that are not only visually appealing but also user-friendly and intuitive to navigate. I pay attention to the latest design trends and ensure that the websites I create look sleek, modern, and professional.
+                      </p><br>
+                      <p>
+                        To achieve a seamless user experience, I employ responsive design techniques, making the websites adaptable to various devices and screen sizes. This ensures that the website looks and functions beautifully, whether accessed from a desktop, tablet, or smartphone.
+                      </p><br>
+                      <p>
+                        Additionally, I have experience in implementing interactive elements, optimizing website performance, and integrating necessary functionalities such as contact forms, social media integration, and content management systems (CMS) like WordPress.
+                      </p><br>
+                      <p>
+                        I am passionate about creating engaging and visually stunning websites that leave a lasting impression. I am committed to providing my clients with high-quality web solutions that enhance their online presence and help them achieve their goals.
+                      </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup-overlay"></div>
+
+<!-- -------------------portfolio---------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle" id="test">My Work <h3>This site too!!</h3></h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/slapthin.gif" alt="">
+                <div class="layer">
+                    <h3>S.W.A.T. fighter</h3>
+                    <p>This Unity3D game plays much like games from the popular platform fighter series Super Smash Brothers</p>
+                    <a href="https://youtu.be/CgIlQmKGkrE"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/ZOOMIN.jpg" alt="">
+                <div class="layer">
+                    <h3>ZOOMIN Scheduler</h3>
+                    <p>This Java software allows Grove City College students to create, edit, and save potential college semester schedules</p>
+                    <a href="https://youtu.be/m5HIaqk_T1A"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/GamRviewpic.jpg" alt="">
+                <div class="layer">
+                    <h3>GamRview</h3>
+                    <p>This website acts as a compendium of video game releases and users to review and socialize over their favorite video games</p>
+                    <a href="https://www.youtube.com/watch?v=RShtBGaVceM"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- <a href="#" class="btn">See more</a> -->
+    </div>
+</div>
+
+<!-- ------------------contact------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><a href="mailto:zgoniea@gmail.com"><i class="fa-regular fa-envelope"></i></a> zgoniea@gmail.com</p>
+                <p><a href="tel:(734)436-1928"><i class="fa-solid fa-square-phone"></i></a> (734) 436-1928</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/zachary-goniea-abba6323a/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/GacharyZoniea"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100010234185694"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/zgoniea/"><i class="fa-brands fa-instagram"></i></i></a>
+                </div>
+                <a href="https://drive.google.com/file/d/19Bhx67zN3v6k0Bd0TNwvOooqTJ4KgxXb/view?usp=sharing" class="btn btn2">Download Resume/CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Zachary Goniea</p>
+        <p class="bit">yeah I like purple, so what?</p>
+    </div>
+</div>
+    
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname) {
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby28Cdm-SVNOqgnaAnqu84c78tPMr-ixYM7GDbRDEKmTec__QF5kDpXG9gY1V_IhCM/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function () {
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+<script>
+    const learnMoreButtons = document.querySelectorAll('.services-list div a');
+    const popupOverlay = document.querySelector('.popup-overlay');
+    const popups = document.querySelectorAll('.popup');
+    const closeButtons = document.querySelectorAll('.close-btn');
+
+    learnMoreButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            event.preventDefault();
+            closeAllPopups();
+            openPopup(index);
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeAllPopups);
+    });
+
+    popupOverlay.addEventListener('click', closeAllPopups);
+
+    function openPopup(index) {
+        popupOverlay.classList.add('active');
+        popups[index].classList.add('active');
+    }
+
+    function closeAllPopups() {
+        popupOverlay.classList.remove('active');
+        popups.forEach((popup) => {
+            popup.classList.remove('active');
+        });
+    }
+</script>
+
+</body>
+</html>
