@@ -184,7 +184,7 @@ nav ul li a:hover::after{
     transition: 0.5s;
 }
 .services-list div h2{
-    font-size: clamp(16px, 4vw, 30px);
+    font-size: clamp(16px, 4vw, 23px);
     font-weight: 500;
     margin-bottom: 15px;
 }
