@@ -398,126 +398,84 @@
 </div>
     
 <script>
-    <!-- ------------------contact------------------- -->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="subtitle">Contact Me</h1>
-                    <p><a href="mailto:zgoniea@gmail.com"><i class="fa-regular fa-envelope"></i></a> zgoniea@gmail.com
-                    </p>
-                    <p><a href="tel:(734)436-1928"><i class="fa-solid fa-square-phone"></i></a> (734) 436-1928</p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/zachary-goniea-abba6323a/" target="_blank"><i
-                                class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://twitter.com/GacharyZoniea" target="_blank"><i
-                                class="fa-brands fa-twitter"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=100010234185694" target="_blank"><i
-                                class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/zgoniea/" target="_blank"><i
-                                class="fa-brands fa-instagram"></i></i></a>
-                        <a href="https://github.com/gacharyzoniea" target="_blank"><i
-                                class="fa-brands fa-github"></i></a>
-                    </div>
-                    <a href="https://drive.google.com/file/d/1Ci8EsI5YGtgr5ffEvnBev3ey0A6Mu5nM/view?usp=drive_link"
-                        class="btn btn2" target="_blank">Download Resume/CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>Copyright © Zachary Goniea</p>
-            <p class="bit">yeah I like purple, so what?</p>
-        </div>
-    </div>
 
-    <script>
-
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link")
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab")
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname) {
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
         }
-    </script>
-
-    <script>
-        var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu() {
-            sidemenu.style.right = "0";
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
         }
-        function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
-    </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycby28Cdm-SVNOqgnaAnqu84c78tPMr-ixYM7GDbRDEKmTec__QF5kDpXG9gY1V_IhCM/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully"
-                    setTimeout(function () {
-                        msg.innerHTML = ""
-                    }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby28Cdm-SVNOqgnaAnqu84c78tPMr-ixYM7GDbRDEKmTec__QF5kDpXG9gY1V_IhCM/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
 
-    <script>
-        const learnMoreButtons = document.querySelectorAll('.services-list div a');
-        const popupOverlay = document.querySelector('.popup-overlay');
-        const popups = document.querySelectorAll('.popup');
-        const closeButtons = document.querySelectorAll('.close-btn');
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function () {
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
 
-        learnMoreButtons.forEach((button, index) => {
-            button.addEventListener('click', () => {
-                event.preventDefault();
-                closeAllPopups();
-                openPopup(index);
-            });
+<script>
+    const learnMoreButtons = document.querySelectorAll('.services-list div a');
+    const popupOverlay = document.querySelector('.popup-overlay');
+    const popups = document.querySelectorAll('.popup');
+    const closeButtons = document.querySelectorAll('.close-btn');
+
+    learnMoreButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            event.preventDefault();
+            closeAllPopups();
+            openPopup(index);
         });
+    });
 
-        closeButtons.forEach((button) => {
-            button.addEventListener('click', closeAllPopups);
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeAllPopups);
+    });
+
+    popupOverlay.addEventListener('click', closeAllPopups);
+
+    function openPopup(index) {
+        popupOverlay.classList.add('active');
+        popups[index].classList.add('active');
+    }
+
+    function closeAllPopups() {
+        popupOverlay.classList.remove('active');
+        popups.forEach((popup) => {
+            popup.classList.remove('active');
         });
-
-        popupOverlay.addEventListener('click', closeAllPopups);
-
-        function openPopup(index) {
-            popupOverlay.classList.add('active');
-            popups[index].classList.add('active');
-        }
-
-        function closeAllPopups() {
-            popupOverlay.classList.remove('active');
-            popups.forEach((popup) => {
-                popup.classList.remove('active');
-            });
-        }
-    </script>
+    }
+</script>
 
 </body>
-
 </html>
+    
