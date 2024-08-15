@@ -1,3 +1,25 @@
+:root {
+    --background: #000000;
+    --normal-font: #ffffff;
+    --gray-font: #ababab;
+    --gray-background: #262626;
+    --nav-hover: #dbd3f3;
+    --gradient: rgba(0, 0, 0, 0.6);
+    --services-font: #ffffff;
+    --form-font: #9a7cf8;
+}
+
+[data-theme="light"] {
+    --background: #ffffff;
+    --normal-font: #000000;
+    --gray-font: #393939;
+    --gray-background: #7d7d7d;
+    --nav-hover: #9274ee;
+    --gradient: rgba(219, 219, 219, 0.6);
+    --services-font: #ffffff;
+    --form-font: #ffffff;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -17,9 +39,48 @@ html{
     margin-top: 30px;
 }
 body{
-    background: #080808;
-    color: #fff;
+    background: var(--background);
+    color: var(--normal-font);
 }
+
+.light-mode{
+    content: url(images/light-mode.png);
+}
+
+.dark-mode{
+    content: url(images/dark-mode.png) !important;
+}
+
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    height: 30px;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 12px;
+    transition: .4s;
+    border-radius: 100%;
+  }
+
+  .slider:hover {
+    transform: scale(1.2);
+    color: #6e58b0;
+    background-color: #6e58b0;
+  }
+
+
 #header{
     width: 100%;
     height: 100vh;
@@ -47,10 +108,10 @@ nav ul li{
 }
 
 nav ul li a:hover{
-    color:#dbd3f3;
+    color:var(--nav-hover);
 }
 nav ul li a{
-    color:#fff;
+    color: var(--normal-font);
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -83,7 +144,7 @@ nav ul li a:hover::after{
 /* -----------about--------------- */
 #about{
     padding: 80px 0;
-    color: #ababab;
+    color: var(--gray-font);
 } 
 
 .row{
@@ -108,7 +169,7 @@ nav ul li a:hover::after{
 .subtitle{
     font-size: 60px;
     font-weight: 600;
-    color: white;
+    color: var(--normal-font);
 }
 
 .tab-titles{
@@ -141,7 +202,7 @@ nav ul li a:hover::after{
 }
 
 .tab-links:hover{
-    color: #dbd3f3;
+    color: var(--nav-hover);
     transform: scale(1.07);
 }
 
@@ -167,6 +228,7 @@ nav ul li a:hover::after{
 
 #services{
     padding: 30px 0;
+    color: var(--services-font);
 }
 .services-list{
     display: grid;
@@ -176,7 +238,7 @@ nav ul li a:hover::after{
 }
 
 .services-list div{
-    background: #262626;
+    background: var(--gray-background);
     padding: 40px;
     font-size: 15px;
     font-weight: 300;
@@ -191,7 +253,7 @@ nav ul li a:hover::after{
 
 .services-list div a{
     text-decoration: none;
-    color: #fff;
+    color: var(--normal-font);
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
@@ -239,7 +301,7 @@ nav ul li a:hover::after{
  .layer{
     width: 100%;
     height: 0%;
-    background: linear-gradient(rgba(0,0,0,0.6), #9a7cf8);
+    background: linear-gradient(var(--gradient), #9a7cf8);
     border-radius: 10px;
     position:absolute;
     left: 0;
@@ -291,7 +353,7 @@ nav ul li a:hover::after{
     border: 1px solid #9a7cf8;
     padding: 14px 50px;
     border-radius: 6px;
-    color: white;
+    color: var(--normal-font);
     text-decoration: none;
     transition: 0.5s;
 }
@@ -324,7 +386,7 @@ nav ul li a:hover::after{
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: white;
+    color: var(--normal-font);
     display: inline-block;
     transition: 0.5s;
 }
@@ -348,12 +410,16 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    background: var(--gray-background);
     padding: 15px;
     margin: 15px 0;
-    color:#9a7cf8;
+    color:var(--form-font);
     font-size: 18px;
     border-radius: 6px;
+}
+
+::placeholder{
+    color: var(--services-font);
 }
 form .btn2{
     padding: 14px 60px;
@@ -365,7 +431,7 @@ form .btn2{
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #262626;
+    background: var(--gray-background);
     font-weight: 300;
     margin-top: 20px;
 }
@@ -508,7 +574,7 @@ nav .fa-solid{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #fff;
+    background: var(--normal-font);
     padding: 20px;
     width: 80%;
     border-radius: 5px;
